@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "592143822308",
+    "project_id": "my-rooms-39bb0",
+    "storage_bucket": "my-rooms-39bb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592143822308:android:3ef00269339b17479c6bf1",
+        "android_client_info": {
+          "package_name": "com.example.myrooms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMDxesfsdjUE_1b_k7QwOfxOr_SUjV8PI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

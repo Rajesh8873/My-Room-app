@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/side_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            tools:ignore="UnusedAttribute" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragment_container_view"
+            android:background="@color/white"/>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottom_nav"
+                android:layout_gravity="bottom"
+                android:backgroundTint="@color/white"
+                app:fabCradleMargin="12dp"
+                app:fabCradleRoundedCornerRadius="60dp"
+                tools:targetApi="lollipop"
+                tools:ignore="VisualLintBottomAppBar">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/navigation_bottom"
+                    app:labelVisibilityMode="labeled"
+                    app:menu="@menu/bottom_menu"
+                    app:itemTextColor="#857A7A"
+                    app:itemIconTint="@color/iconcolor"
+                    app:itemIconSize="30dp"
+
+                    android:background="@android:color/transparent"
+                    tools:ignore="VisualLintBottomNav" />
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/side_nav"
+        android:layout_gravity="start"
+        android:background="#EBE2F8"
+        app:itemIconTint="@color/blue"
+        app:itemTextColor="#220C0C"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        tools:ignore="VisualLintBounds" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
